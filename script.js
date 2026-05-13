@@ -31,6 +31,12 @@ function App() {
     setColor(getRandomColor());
   }
 
+  // 🔹 Copy to Clipboard
+  function copyQuote() {
+    navigator.clipboard.writeText(`"${quote.text}" - ${quote.author}`);
+    alert("Quote copied! Paste di Instagram/TikTok.");
+  }
+
   const appStyle = {
     backgroundColor: color,
     minHeight: "100vh",
@@ -72,6 +78,10 @@ function App() {
              style={{ backgroundColor: color }}>
             <i className="fa-brands fa-whatsapp"></i>
           </a>
+
+          <button id="copy-quote" onClick={copyQuote} style={{ backgroundColor: color }}>
+            <i className="fa-solid fa-copy"></i>
+          </button>
 
           <button id="new-quote" onClick={handleNewQuote} style={{ backgroundColor: color }}>
             New Quote
