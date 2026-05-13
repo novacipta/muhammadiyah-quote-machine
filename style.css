@@ -49,7 +49,8 @@ button, a {
 
 #tweet-quote i,
 #fb-share i,
-#wa-share i {
+#wa-share i,
+#copy-quote i {
   font-size: 18px;
 }
 
